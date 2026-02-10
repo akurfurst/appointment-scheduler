@@ -1,0 +1,25 @@
+fieldset {
+    display: flex;
+    flex-direction: column;
+}
+
+.err {
+    color: red;
+}
+
+input {
+    height: 2rem;
+    width: 50%;
+    border: 1px solid black;
+    border-radius: 1rem;
+    margin-bottom: .5rem;
+}
+
+button {
+    width: 300px;
+    height: 2rem;
+    background-color: lime;
+    border: 2px silid greenyellow;
+    border-radius: 1rem;
+    ;
+}
