@@ -7,7 +7,7 @@ const app = express();
 app.use(express.urlencoded({ extended: true }));
 
 //create a temp array to store orders
-const orders = [];
+const appointments = [];
 
 //define a port number where server will listen
 const PORT = 4000;
@@ -20,5 +20,5 @@ app.get('/', (req, res) => {
 });
 
 app.listen(PORT, () => {
-    console.log(`Server is running at http:/localhost:${PORT}`);
+    console.log(`Server is running at http://localhost:${PORT}`);
 });
