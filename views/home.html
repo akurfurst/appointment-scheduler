@@ -9,7 +9,38 @@
     <main>
         <h1>Appointment Form</h1>
 
-        
+        <form id="appointment-form" action="/submit" method="post">
+
+            <!-- Contact Info -->
+            <fieldset>
+                <legend>Contact Info</legend>
+
+                <label for="fname">First Name:
+                    <span class="err" id="err-fname">
+                        First name is required!
+                    </span>
+                </label>
+                <input type="text" id="fname" name="fname">
+
+                <label for="lname">Last Name:
+                    <span class="err" id="err-lname">
+                        Last name is required!
+                    </span>
+                </label>
+                <input type="text" id="lname" name="lname">
+
+                <label for="date">date</label>
+                <input type="date" id="date" name="date">
+
+                <label for="time">Time</label>
+                <input type="time" id="time" name="time">
+
+                <!-- Submit button -->
+                <button type="submit" id="order-button">Place Order</button>
+
+            </fieldset>
+                
+        </form>
     </main>
 </body>
 </html>
