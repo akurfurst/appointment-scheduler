@@ -1,4 +1,5 @@
-document.getElementById("pizza-form").onsubmit = () => {
+console.log("test");
+document.getElementById("appointment-form").onsubmit = () => {
 
     clearErrors();
 
