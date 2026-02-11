@@ -32,7 +32,7 @@ app.post('/submit', (req, res) => {
         fname: req.body.fname,
         lname: req.body.lname,
         date: req.body.date,
-        time: req.body.tim,
+        time: req.body.time,
         timestamp: new Date()
     };
 
@@ -41,6 +41,10 @@ app.post('/submit', (req, res) => {
 
     //res.send(appointments)
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
+});
+
+app.get('/admin', (req, res) => {
+    res.send(appointments);
 });
 
 app.listen(PORT, () => {

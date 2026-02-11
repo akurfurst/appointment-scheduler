@@ -1,3 +1,4 @@
+
 document.getElementById("appointment-form").onsubmit = () => {
 
     clearErrors();
