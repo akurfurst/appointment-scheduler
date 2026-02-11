@@ -6,7 +6,7 @@ const app = express();
 //Middleware that allows express to read form data and store it in req.body
 app.use(express.urlencoded({ extended: true }));
 
-//create a temp array to store orders
+//create a temp array to store appointments
 const appointments = [];
 
 //define a port number where server will listen
@@ -15,8 +15,14 @@ const PORT = 4000;
 //enable static file serving
 app.use(express.static('public'));
 
+// define confirmation route
 app.get('/', (req, res) => {
     res.sendFile(`${import.meta.dirname}/views/home.html`);
+});
+
+// admin route ('/')
+app.get('/admin', (req, res) => {
+    res.send(appointments);
 });
 
 app.post('/submit', (req, res) => {
@@ -30,10 +36,10 @@ app.post('/submit', (req, res) => {
         timestamp: new Date()
     };
 
-    //Add order object to orders
+    //Add appointment object to appointments
     appointments.push(appointment)
 
-    //res.send(orders)
+    //res.send(appointments)
     res.sendFile(`${import.meta.dirname}/views/confirmation.html`);
 });
 

@@ -5,6 +5,7 @@ fieldset {
 
 .err {
     color: red;
+    display: none;
 }
 
 input {

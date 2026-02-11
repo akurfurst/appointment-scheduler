@@ -1,4 +1,4 @@
-document.getElementById("pizza-form").onsubmit = () => {
+document.getElementById("appointment-form").onsubmit = () => {
 
     clearErrors();
 
