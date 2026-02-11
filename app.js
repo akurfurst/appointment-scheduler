@@ -27,7 +27,7 @@ app.get('/admin', (req, res) => {
 
 app.post('/submit', (req, res) => {
 
-    //crate a JSON object to store the order data
+    //crate a JSON object to store the form data
     const appointment = {
         fname: req.body.fname,
         lname: req.body.lname,
